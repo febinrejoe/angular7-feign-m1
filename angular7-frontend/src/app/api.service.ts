@@ -7,7 +7,7 @@ import { Employee } from './employee';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = "THIS_NEEDS_TO_CHANGE";
+const apiUrl = '/employees';
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +45,9 @@ export class ApiService {
 
   addEmployee (employee): Observable<Employee> {
     return this.http.post<Employee>(apiUrl, employee, httpOptions).pipe(
-      tap((employee: Employee) => console.log(`added employee w/ id=${employee.id}`)),
+      tap((pipedEmployee: Employee) => {
+        return console.log(`added employee w/ id=${pipedEmployee.id}`);
+      }),
       catchError(this.handleError<Employee>('addEmployee'))
     );
   }

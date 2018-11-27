@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { ApiService } from '../api.service';
-import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {Router, ActivatedRoute} from '@angular/router';
+import {ApiService} from '../api.service';
+import {FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-employee-edit',
@@ -11,19 +11,20 @@ import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Valida
 export class EmployeeEditComponent implements OnInit {
 
   employeeForm: FormGroup;
-  id:string='';
-  firstName:string='';
-  lastName:string='';
-  email:string='';
+  id = '';
+  firstName = '';
+  lastName = '';
+  email = '';
   isLoadingResults = false;
 
-  constructor(private router: Router, private route: ActivatedRoute, private api: ApiService, private formBuilder: FormBuilder) { }
+  constructor(private router: Router, private route: ActivatedRoute, private api: ApiService, private formBuilder: FormBuilder) {
+  }
 
   ngOnInit() {
     this.employeeForm = this.formBuilder.group({
-      'firstName' : [null, Validators.required],
-      'lastName' : [null, Validators.required],
-      'email' : [null, Validators.required]
+      'firstName': [null, Validators.required],
+      'lastName': [null, Validators.required],
+      'email': [null, Validators.required]
     });
   }
 
@@ -38,11 +39,11 @@ export class EmployeeEditComponent implements OnInit {
     });
   }
 
-  onFormSubmit(form:NgForm) {
+  onFormSubmit(form: NgForm) {
     this.isLoadingResults = true;
     this.api.updateEmployee(this.id, form)
       .subscribe(res => {
-          let id = res['id'];
+          const id = res['id'];
           this.isLoadingResults = false;
           this.router.navigate(['/employee-details', id]);
         }, (err) => {

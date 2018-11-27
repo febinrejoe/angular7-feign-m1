@@ -1,0 +1,15 @@
+eureka:
+  client:
+    enabled: false
+
+server:
+  port: 0
+
+spring:
+  main:
+    banner-mode: 'off'
+  output:
+    ansi:
+      enabled: ALWAYS
+  zipkin:
+    enabled: false

@@ -18,7 +18,7 @@ import {
   MatIconModule,
   MatButtonModule,
   MatCardModule,
-  MatFormFieldModule } from "@angular/material";
+  MatFormFieldModule } from '@angular/material';
 
 @NgModule({
   declarations: [
