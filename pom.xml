@@ -22,8 +22,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <spring-cloud-services.version>1.6.6.RELEASE</spring-cloud-services.version>
         <spring-cloud.version>Edgware.SR5</spring-cloud.version>
-        <spring-cloud-services.version>2.0.3.RELEASE</spring-cloud-services.version>
     </properties>
 
     <dependencies>
@@ -74,8 +74,21 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>src/insights-web/node</directory>
+                        </fileset>
+                        <fileset>
+                            <directory>src/insights-web/node_modules</directory>
+                        </fileset>
+                        <fileset>
+                            <directory>src/insights-web/www</directory>
+                        </fileset>
+                    </filesets>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>com.github.eirslett</groupId>
@@ -148,6 +161,10 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
