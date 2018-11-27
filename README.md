@@ -4,15 +4,26 @@
 
 Verify node version > 8.11
 
+```
 node -v
+```
 
 Verify npm version > 6.0.0
 
+```
 npm -v
+```
+Create an app using the CLI
 
-ng new workshop-frontend
+```
+ng new angular7-frontend
+```
 
-cd workshop-frontend
+At this point I made changes to the app, to access the backend services
 
-ng serve --host 0.0.0.0 --port 3000
+Now I'm ready to run it:
 
+```
+cd angular7-frontend
+ng serve
+```
