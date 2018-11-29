@@ -1,9 +1,9 @@
----
 applications:
-  - buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  - buildpacks:
+      - https://github.com/cloudfoundry/java-buildpack.git
     name: frontend
     memory: 2048m
-    path: frontend-prebuild.jar
+    path: frontend-prebuilt.jar
     random-route: true
     services:
       - config-service
