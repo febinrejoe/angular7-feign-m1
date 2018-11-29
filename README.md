@@ -1,12 +1,6 @@
 # simple-frontend
 
-## Build the app
-
-Use the included maven wrapper:
-
-```
-./mvnw clean install
-```
+## The application has already been built for you
 
 ## Deploy the app
 
