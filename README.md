@@ -4,6 +4,7 @@
 
 ```
 git clone git@github.com:cts-workshop-12-2018/angular7-m0.git
+cd angular7-m0
 ```
 
 ## Deploy the app
