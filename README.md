@@ -5,7 +5,7 @@
 This is the only time you should need git
 
 ```
-git clone git@github.com:cts-workshop-12-2018/angular7-m0.git
+git clone https://github.com/cts-workshop-12-2018/angular7-m0
 cd angular7-m0
 ```
 
