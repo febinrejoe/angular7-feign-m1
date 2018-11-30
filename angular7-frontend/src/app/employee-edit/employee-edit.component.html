@@ -9,24 +9,24 @@
   <mat-card class="example-card">
     <form [formGroup]="employeeForm" (ngSubmit)="onFormSubmit(employeeForm.value)">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Employee Name" formControlName="prod_name"
+        <input matInput placeholder="First Name" formControlName="firstName"
                [errorStateMatcher]="matcher">
         <mat-error>
-          <span *ngIf="!employeeForm.get('prod_name').valid && employeeForm.get('prod_name').touched">Please enter Employee Name</span>
+          <span *ngIf="!employeeForm.get('firstName').valid && employeeForm.get('firstName').touched">First Name</span>
         </mat-error>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Employee Desc" formControlName="prod_desc"
+        <input matInput placeholder="Last Name" formControlName="lastName"
                [errorStateMatcher]="matcher">
         <mat-error>
-          <span *ngIf="!employeeForm.get('prod_desc').valid && employeeForm.get('prod_desc').touched">Please enter Employee Description</span>
+          <span *ngIf="!employeeForm.get('lastName').valid && employeeForm.get('lastName').touched">Last Name</span>
         </mat-error>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Employee Price" formControlName="prod_price"
+        <input matInput placeholder="Email" formControlName="email"
                [errorStateMatcher]="matcher">
         <mat-error>
-          <span *ngIf="!employeeForm.get('prod_price').valid && employeeForm.get('prod_price').touched">Please enter Employee Price</span>
+          <span *ngIf="!employeeForm.get('email').valid && employeeForm.get('email').touched">Email</span>
         </mat-error>
       </mat-form-field>
       <div class="button-row">

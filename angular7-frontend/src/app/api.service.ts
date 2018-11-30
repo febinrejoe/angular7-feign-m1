@@ -7,7 +7,7 @@ import { Employee } from './employee';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = '/employees';
+const apiUrl = '/api/employees';
 
 @Injectable({
   providedIn: 'root'

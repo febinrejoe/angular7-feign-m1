@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 import {ApiService} from '../api.service';
-import {FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-employee-edit',
@@ -21,10 +21,12 @@ export class EmployeeEditComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getEmployee(this.route.snapshot.params['id']);
     this.employeeForm = this.formBuilder.group({
       'firstName': [null, Validators.required],
       'lastName': [null, Validators.required],
-      'email': [null, Validators.required]
+      'email': [null, Validators.required],
+      'id': [null, Validators.required]
     });
   }
 
@@ -34,7 +36,8 @@ export class EmployeeEditComponent implements OnInit {
       this.employeeForm.setValue({
         firstName: data.firstName,
         lastName: data.lastName,
-        email: data.email
+        email: data.email,
+        id: data.id
       });
     });
   }
