@@ -25,4 +25,4 @@ cf push
 
 [Creating a new app with Java](https://github.com/cts-workshop-12-2018/spring-employee-service-m1) 
 
-[Creating a new app wiht DotNet](https://github.com/cts-workshop-12-2018/dotnet-employee-service-m1)
+[Creating a new app with DotNet](https://github.com/cts-workshop-12-2018/dotnet-employee-service-m1)
