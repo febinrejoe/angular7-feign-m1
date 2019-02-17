@@ -5,7 +5,7 @@
 This is the only time you should need git
 
 ```
-git clone https://github.com/cts-workshop-12-2018/angular7-m0
+git clone https://github.com/cts-workshop-02-2019/angular7-m0
 cd angular7-m0
 ```
 
@@ -23,6 +23,6 @@ cf push
 
 ## Create an app from scratch
 
-[Creating a new app with Java](https://github.com/cts-workshop-12-2018/spring-employee-service-m1) 
+[Creating a new app with Java](https://github.com/cts-workshop-02-2019/spring-employee-service-m1) 
 
-[Creating a new app with DotNet](https://github.com/cts-workshop-12-2018/dotnet-employee-service-m1)
+[Creating a new app with DotNet](https://github.com/cts-workshop-02-2019/dotnet-employee-service-m1)
