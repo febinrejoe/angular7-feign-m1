@@ -7,5 +7,4 @@ applications:
     random-route: true
     services:
       - config-service
-      - discovery-service
     timeout: 180
