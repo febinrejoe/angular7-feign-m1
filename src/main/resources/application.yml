@@ -1,3 +1,22 @@
 info:
   build:
     version: @project.version@
+    
+employees-api:
+#  url: https://spring-employees-funny-mongoose.apps.dev.us-west-2.cernercf.io/
+  url: https://rapid-staging.cerner.com:8243/febin-emp/v1
+
+security:
+  oauth2:
+    client:
+      access-token-uri: https://rapid-staging.cerner.com:8243/token
+      client-id: 5MJAGC9y8UBopT72LPmsWIbRqHca
+      client-secret: oRbVUfLv3XWK3bM2EonuAZFeqYAa
+      
+spring:
+  main:
+    allow-bean-definition-overriding: true
+    
+feign:
+  oauth2:
+    enabled: true
